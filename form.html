@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>FORM SAMPLE</title>
+	
+<style>
+.comment-form input[type='text'],
+.comment-form input[type='email'],
+.comment-form  {
+	width: 100%;
+	border: 1px solid #cccccc;
+	font-size: 14px;
+	padding: 18px 20px;
+	margin-bottom: 30px;
+	border-radius: 2px;
+}
+
+.comment-form textarea {
+	height: 150px;
+	width: 100%;
+}
+
+.comment-form.--contact input[type='text'],
+.comment-form.--contact input[type='email'],
+.comment-form.--contact textarea {
+}
+
+.comment-form.--contact textarea {
+	margin-bottom: 50px;
+}
+</style>
+	
+</head>
+<body>
+
+	<div class="yets-touch">
+		<form class="comment-form --contact">
+				<div class="row">
+					<div class="col-lg-4">
+						<input type="text" placeholder="Your Name">
+					</div>
+					<div class="col-lg-4">
+						<input type="text" placeholder="Your Email">
+					</div>
+					<div class="col-lg-4">
+						<input type="text" placeholder="Subject">
+					</div>
+					<div class="col-lg-12">
+						<textarea placeholder="Message"></textarea>
+					</div>
+					<div class="text-center">
+						<button class="site-btn">SUBMIT</button>
+					</div>
+				</div>
+		</form>
+
+	</div>
+</body>
+</html>
+

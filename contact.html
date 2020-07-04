@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UNIIT - University of NIIT</title>
+	<meta name="description" content="University of NIIT">
+	<meta name="keywords" content="school, UNIIT, University, tech">
+   
+	<link rel="shortcut icon" href="img/logo-logo.png"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i"/>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+	<header class="header-section">
+		<div class="container">
+			<a href="index.html" class="site-logo"><img src="img/logo-logo.png" alt=""></a>
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<div class="header-info">
+				<div class="hf-item">
+					<i class="fa fa-map-marker"></i>
+					<p><span>Find us:</span>18, Olabode Street Ikotun, Lagos, Nigeria</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="nav-section">
+		<div class="container">
+			<ul class="main-menu">
+				<li class="active"><a href="home.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="courses.html">COURSES</a></li>
+				<li><a href="applynow.html">Apply Now</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="site-breadcrumb">
+		<div class="container">
+			<a href="#"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-right"></i>
+			<span>Contact</span>
+		</div>
+	</div>
+
+	<section class="contact-page spad pt-0">
+		<div class="container">
+			<div class="map-section">
+				<div class="contact-info-warp">
+					<div class="contact-info">
+						<h4>Address</h4>
+						<p>18, Olabode Street Ikotun, Lagos, Nigeria</p>
+					</div>
+					<div class="contact-info">
+						<h4>Phone</h4>
+						<p>(+234) 8136546972</p>
+					</div>
+					<div class="contact-info">
+						<h4>Email</h4>
+						<p>UniversityofNIIT@gmail.com</p>
+					</div>
+					<div class="contact-info">
+						<h4>Working time</h4>
+						<p>Monday - Saturday, 08:00AM - 06:00 PM</p>
+					</div>
+				</div>
+				<div class="map" id="map-canvas">
+				</div>
+			</div>
+			<div class="contact-form spad pb-0">
+				<div class="section-title text-center">
+					<h3>GET IN TOUCH</h3>
+					<p>Contact us for more information</p>
+				</div>
+
+				<form class="form-touch" name="GetForm" method="POST" />
+					<fieldset>
+						<div>
+							<input type="text" id="yyname" style="margin-right: 25px;" placeholder="Your Name" />
+						</div>
+						<div>
+							<input type="email" id="yyemail" style="margin-right: 25px;" placeholder="Your Email" />
+						</div>
+						<div>
+							<input type="text" id="yysubj" placeholder="Subject" />
+						</div>
+						<div>
+							<input type="text" id="yymessag" placeholder="Message" />
+						</div>
+						<div style="text-align: center; margin-bottom: 20px">
+							<input type="submit" class="button site-btn" onclick="return ValidatesGetForm()" value="Submit"/>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<script>
+			function ValidatesGetForm()
+		{
+			var yname = document.forms["GetForm"] ["yyname"];
+			var ymail = document.forms["GetForm"] ["yyemail"];
+			var ysubj = document.forms["GetForm"] ["yysubj"];
+			var ymesag = document.forms["GetForm"] ["yymessag"];
+
+			if (yname.value == "")                                  
+    	{ 
+        	window.alert("Please enter Your Name."); 
+        	fname.focus(); 
+        	return false; 
+    	} 
+
+	    	if (ymail.value == "")                                   
+	    { 
+	        window.alert("Please enter a valid e-mail address."); 
+	        email.focus(); 
+	        return false; 
+	    } 
+	   
+	    	if (ymail.value.indexOf("@", 0) < 0)                 
+	    { 
+	        window.alert("Please enter a valid e-mail address."); 
+	        email.focus(); 
+	        return false; 
+	    } 
+	   
+	    	if (ymail.value.indexOf(".", 0) < 0)                 
+	    { 
+	        window.alert("Please enter a valid e-mail address."); 
+	        email.focus(); 
+	        return false; 
+	    } 
+
+    		if (ysubj.value == "")                                  
+    	{ 
+        	window.alert("The Subject Box can't be empty."); 
+        	lname.focus(); 
+        	return false; 
+    	} 
+
+    		if (ymesag.value == "")                                  
+    	{ 
+        	window.alert("The Message Box can't be empty."); 
+        	lname.focus(); 
+        	return false; 
+    	} 
+	    	return true;
+	    }
+	</script>
+
+	<section class="newsletter-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-lg-7">
+					<div class="section-title mb-md-0">
+					<h3>SUBSCRIBE TO US</h3>
+					<p>Subscribe and get the latest news about admission and academic activities.</p>
+				</div>
+				</div>
+				<div class="col-md-7 col-lg-5">
+					<form class="newsletter" name="form1" method="POST">
+						<input type="text" placeholder="Enter your email" name="text1">
+						<button class="site-btn" onclick="return ValidateEmail(document.form1.text1)" name="Submit">SUBSCRIBE</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		function ValidateEmail(inputText)
+    {
+		    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		    var empty= " ";
+		    if(inputText.value.match(mailformat))
+		    {
+		     alert("Thank you for Subscribing to the UNIIT Newsletter, we would keep you informed about the latest news concerning our institution."); 
+		    document.form1.text1.focus();
+		    return true;
+		    }
+		    else{
+		    alert("Please enter a invalid email address!");
+		    document.form1.text1.focus();
+		    return false;}
+	}
+	</script>
+
+	<footer class="footer-section">
+		<div class="container footer-top">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 footer-widget">
+					<div class="about-widget">
+						<img src="img/logo-logo.png" alt="" width="200px" height="130px">
+						<p>An investment in knowledge pays the best interest.</p>
+						<div class="social pt-1">
+							<a href=""><i class="fa fa-twitter-square"></i></a>
+							<a href=""><i class="fa fa-facebook-square"></i></a>
+							<a href=""><i class="fa fa-google-plus-square"></i></a>
+							<a href=""><i class="fa fa-linkedin-square"></i></a>
+							<a href=""><i class="fa fa-rss-square"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3 footer-widget new-class" >
+					<h6 class="fw-title"> USEFUL LINK</h6>
+					<div class="dobule-link">
+						<ul>
+							<li><a href="home.html">Home</a></li>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="courses.html">Course</a></li>
+							<li><a href="applynow.html">Apply Now</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 footer-widget recent-class">
+					<h6 class="fw-title">CONTACT</h6>
+					<ul class="contact">
+						<li><p><i class="fa fa-map-marker"></i> 18, Olabode Street Ikotun, Lagos, Nigeria</p></li>
+						<li><p><i class="fa fa-phone"></i> (+234) 8136546972</p></li>
+						<li><p><i class="fa fa-envelope"></i> UniversityofNIIT@gmail.com</p></li>
+						<li><p><i class="fa fa-clock-o"></i> Monday - Saturday, 08:00AM - 06:00 PM</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+	</footer>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0YyDTa0qqOjIerob2VTIwo_XVMhrruxo"></script>
+	<script src="js/map.js"></script>
+	
+</body>
+</html>
